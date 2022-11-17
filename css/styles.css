@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fff;
+    --red-color: hsl(0, 78%, 62%);
+    --cyan-color: hsl(180, 62%, 55%);
+    --orange-color: hsl(34, 97%, 64%);
+    --blue-color: hsl(212, 86%, 64%);
+    --primary-color: hsl(234, 12%, 34%);
+    --secondary-color: hsl(229, 6%, 66%);
+    --shadow-color: hsl(0, 0%, 98%);
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--shadow-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 40px;
+    margin: auto;
+}
+
+.heading_1 {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.heading_2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+header p {
+    font-weight: 200;
+    color: var(--secondary-color);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    padding: 20px;
+    width: 320px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px grey;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.box label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.box p{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.middle-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-boxes {
+    border-top-color: var(--cyan-color);
+    border-top-style: solid;
+}
+
+.right-boxes {
+    border-top-color: var(--blue-color);
+    border-top-style: solid;
+}
+
+.top-box {
+    border-top-color: var(--red-color);
+    border-top-style: solid;
+}
+
+.bottom-box {
+    border-top-color: var(--orange-color);
+    border-top-style: solid;
+}
+
+img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media only screen and (min-width: 1100px) {
+    header {
+        width: 40%;
+        padding: 60px;
+    }
+    section {
+        gap: 30px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    header {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 425px) {
+    .box {
+        width: 230px;
+    }
+    header {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    section{
+        flex-direction: column;
+    }
+    .heading_1, .heading_2 {
+        font-size: 1.5rem;
+    }
+    .box {
+        width: 310px;
+    }
+    header {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .box {
+        width: 280px;
+    }
+    header {
+        padding: 15px;
+    }
+    .heading_1, .heading_2 {
+        font-size: 1.4rem;
+    }
+}
